@@ -1,0 +1,17 @@
+public class Solution {
+    public bool solution(int x) {
+        bool answer = true;
+        int arrSum = 0;
+        char[] arr = x.ToString().ToCharArray();
+        for(int i = 0; i < arr.Length; i++){
+            arrSum += int.Parse(arr[i].ToString());
+        }
+        if(x%arrSum == 0){
+            answer = true;
+        }
+        else{
+            answer = false;
+        }
+        return answer;
+    }
+}
